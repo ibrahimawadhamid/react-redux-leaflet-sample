@@ -1,0 +1,1 @@
+export const SET_MAP_VISIBLE = 'SET_MAP_VISIBLE';
