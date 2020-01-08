@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-redux-leaflet-sample/static/css/main.5626cd61.chunk.css",
+    "main.js": "/react-redux-leaflet-sample/static/js/main.8aea1510.chunk.js",
+    "main.js.map": "/react-redux-leaflet-sample/static/js/main.8aea1510.chunk.js.map",
+    "runtime-main.js": "/react-redux-leaflet-sample/static/js/runtime-main.ad50d060.js",
+    "runtime-main.js.map": "/react-redux-leaflet-sample/static/js/runtime-main.ad50d060.js.map",
+    "static/css/2.098bc035.chunk.css": "/react-redux-leaflet-sample/static/css/2.098bc035.chunk.css",
+    "static/js/2.e7163c3f.chunk.js": "/react-redux-leaflet-sample/static/js/2.e7163c3f.chunk.js",
+    "static/js/2.e7163c3f.chunk.js.map": "/react-redux-leaflet-sample/static/js/2.e7163c3f.chunk.js.map",
+    "index.html": "/react-redux-leaflet-sample/index.html",
+    "precache-manifest.cfd14aaf4ac5900222a5cd05e9d33e70.js": "/react-redux-leaflet-sample/precache-manifest.cfd14aaf4ac5900222a5cd05e9d33e70.js",
+    "service-worker.js": "/react-redux-leaflet-sample/service-worker.js",
+    "static/css/2.098bc035.chunk.css.map": "/react-redux-leaflet-sample/static/css/2.098bc035.chunk.css.map",
+    "static/css/main.5626cd61.chunk.css.map": "/react-redux-leaflet-sample/static/css/main.5626cd61.chunk.css.map",
+    "static/js/2.e7163c3f.chunk.js.LICENSE": "/react-redux-leaflet-sample/static/js/2.e7163c3f.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad50d060.js",
+    "static/css/2.098bc035.chunk.css",
+    "static/js/2.e7163c3f.chunk.js",
+    "static/css/main.5626cd61.chunk.css",
+    "static/js/main.8aea1510.chunk.js"
+  ]
+}
