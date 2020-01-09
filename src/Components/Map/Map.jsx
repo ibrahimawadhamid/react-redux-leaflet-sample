@@ -8,27 +8,30 @@ import "./Map.css";
 
 class Map extends Component {
     componentDidMount() {
-        // create stamen layer
-        const stamenTonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
-            attribution: `${process.env.REACT_APP_NAME} v-${process.env.REACT_APP_VERSION}`,
-            subdomains: 'abcd',
-            minZoom: 0,
-            maxZoom: 20,
-            ext: 'png'
-        });
+        const mbAttr = `${process.env.REACT_APP_NAME} v-${process.env.REACT_APP_VERSION}`,
+            mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+        const grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', attribution: mbAttr}),
+            darkscale   = L.tileLayer(mbUrl, {id: 'mapbox/dark-v9', attribution: mbAttr}),
+            streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
+
         // create map
         this.map = L.map('map', {
-            center: [49.8419, 24.0315],
-            zoom: 16,
-            layers: [
-                stamenTonerLite,
-            ]
+            center: [25, 25],
+            zoom: 4,
+            layers: [grayscale]
         });
+        var baseLayers = {
+            "Grayscale": grayscale,
+            "Darkscale": darkscale,
+            "Streets": streets
+        };
+
+        L.control.layers(baseLayers).addTo(this.map);
 
         BrandControl({position: 'bottomright'}).addTo(this.map);
         SpinnerControl({position: 'topleft'}).addTo(this.map);
-        stamenTonerLite.on('loading', () => {this.showLoadingSpinner()});
-        stamenTonerLite.on('load', () => {this.hideLoadingSpinner()});
+
         this.map.on('zoomstart movestart', () => {
             this.showLoadingSpinner();
         });
